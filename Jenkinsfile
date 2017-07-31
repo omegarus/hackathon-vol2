@@ -80,10 +80,11 @@ node {
     try {
       stage ("Destroy Test"){
         // remove the containers
-        sh "sudo docker stop redis-${env.BUILD_NUMBER} webapp-${env.BUILD_NUMBER}"
-        sh "sudo docker rm -v redis-${env.BUILD_NUMBER} webapp-${env.BUILD_NUMBER}"
+        //sh "sudo docker stop redis-${env.BUILD_NUMBER} webapp-${env.BUILD_NUMBER}"
+       // sh "sudo docker rm -v redis-${env.BUILD_NUMBER} webapp-${env.BUILD_NUMBER}"
         // remove the volume clone
-        sh "sudo docker volume rm vol-redis-${env.BUILD_NUMBER}"
+       // sh "sudo docker volume rm vol-redis-${env.BUILD_NUMBER}"
+	      sh "docker ps"
       }
     } finally {
 
