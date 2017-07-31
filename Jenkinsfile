@@ -32,7 +32,7 @@ node {
       TEST_PORT = readFile('user.out').trim()
 
       // give the container 5 seconds to initialize the web server
-	  sh "sleep 5"
+	  sh "sleep 20"
 
       // connect to the webapp and verify it listens and is connected to the db
       //
